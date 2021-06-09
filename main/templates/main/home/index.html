@@ -1,5 +1,13 @@
-{% extends "main/base.html" %} {% load static %} {% block content %}
+{% extends "main/base.html" %}
 
-<h1>Inicio</h1>
+{% load static %}
+
+{% block content %}
+
+{% include "main/home/hero.html"%}
+{% include "main/home/products.html"%}
+{% include "main/home/types.html"%}
+{% include "main/home/recipes.html"%}
+{% include "main/home/contact.html"%}
 
 {% endblock content %}

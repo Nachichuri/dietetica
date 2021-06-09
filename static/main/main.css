@@ -1,10 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
+/* Main */
+
 :root {
-  --main-color: #800040;
-  --gray-color: #212529;
-  --light-gray-color: #495057;
+  --dark-brown: #281511;
+  --brown: #6e3b19;
+  --green: #008237;
+  --light-brown: #cea47b;
+  --wheat: #f8edbe;
 }
 
 * {
@@ -23,6 +27,52 @@ body {
   flex-direction: column;
 }
 
-main {
-  margin-top: 4em;
+a,
+u {
+  text-decoration: none;
+}
+
+.section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: var(--light-brown);
+}
+
+.navbar-brand,
+.nav-link,
+.dropdown-item {
+  color: #000 !important;
+}
+
+/* *** Home *** */
+
+/* Hero */
+
+.hero {
+}
+
+.hero-img {
+  border-radius: 2%;
+}
+
+/* Products */
+
+/* Types */
+
+.types {
+}
+
+/* Recipes */
+
+/* Contact */
+
+/* Footer */
+
+.footer {
+  background-color: var(--wheat);
 }
