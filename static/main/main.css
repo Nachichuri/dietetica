@@ -115,6 +115,8 @@ h1 {
 /* Hero */
 
 .hero {
+  padding-top: 5em;
+  padding-bottom: 3rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
@@ -122,12 +124,50 @@ h1 {
   border-radius: 2%;
 }
 
-/* Products */
-
 /* Types */
 
 .types {
+  margin-top: -3em;
+  box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.1);
 }
+
+.product-type-container {
+  display: flex;
+  align-items: center;
+}
+
+.product-type-container .product-type:first-child {
+  border-left-width: 2px !important;
+  border-radius: 10px 0 0 10px;
+}
+
+.product-type-container .product-type:last-child {
+  border-right-width: 2px !important;
+  border-radius: 0 10px 10px 0;
+}
+
+.product-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  height: 100px;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px 1px 2px 1px;
+  border-color: #d3d3d3;
+  color: var(--green);
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.product-type:hover {
+  color: white;
+  background-color: var(--green);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Products */
 
 /* Recipes */
 
