@@ -128,12 +128,14 @@ h1 {
 
 .types {
   margin-top: -3em;
-  box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .product-type-container {
   display: flex;
   align-items: center;
+  box-shadow: 0px 23px 38px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .product-type-container .product-type:first-child {
@@ -165,6 +167,22 @@ h1 {
   color: white;
   background-color: var(--green);
   transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 991px) {
+  .product-type {
+    border-width: 1px 2px 1px 2px;
+  }
+
+  .product-type-container .product-type:first-child {
+    border-top-width: 2px !important;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .product-type-container .product-type:last-child {
+    border-bottom-width: 2px !important;
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 /* Products */
