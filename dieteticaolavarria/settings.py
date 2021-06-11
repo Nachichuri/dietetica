@@ -1,6 +1,7 @@
 import os
 import dj_database_url
 import django_heroku
+import logging
 
 from pathlib import Path
 
@@ -87,6 +88,23 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Logging
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}
 
 # Internationalization
 
