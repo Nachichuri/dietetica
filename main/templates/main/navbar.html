@@ -1,43 +1,72 @@
-<nav
-  class="navbar navbar-expand-lg navbar-dark bg-dark"
-  aria-label="Eighth navbar example"
->
+<div class="top-banner" id="top-banner">
+  <div class="container">
+    <div class="row">
+      <div class="top-banner-icons col-sm-4">
+        <i class="fab fa-facebook-f"></i>
+        <a href="https://www.instagram.com/dieteticaolavarria/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <i class="fab fa-whatsapp"></i>
+      </div>
+
+      <div class="top-banner-time col-sm-4 text-center">
+        <span>L-V 8:00–12:00 | S 8:00-12:00</span>
+      </div>
+
+      <div class="top-banner-contact col-sm-4 text-end">
+        <a
+          href="https://www.google.com/maps/dir/Current+Location/Necochea+2875,+B7400+Olavarría,+Provincia+de+Buenos+Aires"
+          target="_blank"
+        >
+          <i class="fas fa-map-marker-alt"></i> Necochea 2875, Olavarría
+        </a>
+        <span id="separator">|</span>
+        <span><i class="fas fa-phone"></i> (2284) 417-518</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light" id="navbar">
   <div class="container">
     <a class="navbar-brand" href="#">Dietética Olavarría</a>
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbarsExample07"
-      aria-controls="navbarsExample07"
+      data-bs-target="#navbartoggle"
+      aria-controls="navbartoggle"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExample07">
+    <div class="collapse navbar-collapse" id="navbartoggle">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
-            id="dropdown07"
+            id="dropdown"
             data-bs-toggle="dropdown"
             aria-expanded="false"
-            >Dropdown</a
+            >Despensa</a
           >
-          <ul class="dropdown-menu" aria-labelledby="dropdown07">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu" aria-labelledby="dropdown">
+            <li><a class="dropdown-item" href="#">Hierbas naturales</a></li>
+            <li><a class="dropdown-item" href="#">Especias</a></li>
+            <li><a class="dropdown-item" href="#">Harinas</a></li>
+            <li><a class="dropdown-item" href="#">Legumbres</a></li>
+            <li><a class="dropdown-item" href="#">Frutos secos</a></li>
+            <li><a class="dropdown-item" href="#">Semillas</a></li>
           </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Recetas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contacto</a>

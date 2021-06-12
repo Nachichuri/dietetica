@@ -1,5 +1,87 @@
-<footer class="footer mt-auto py-3 bg-light">
-  <div class="container">
-    <span class="text-muted">{% now "Y" %} - Dietética Olavarría</span>
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="row footer-cols">
+      <div class="col-lg-6 map-column">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.92188796162!2d-60.32141868426223!3d-36.89221687992985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959445c5bc3e8eb9%3A0xda1552bfbb733fdd!2sDIETETICA%20OLAVARRIA!5e0!3m2!1sen!2sar!4v1623469823239!5m2!1sen!2sar"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="col-lg-6 contact-column">
+        <div class="footer-row-container">
+          <div class="row footer-open-time">
+            <h3 class="footer-title">Horarios de atención</h3>
+            <table>
+              <tr>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr>
+                <td><strong>Lun. a Vie.</strong></td>
+                <td></td>
+              </tr>
+              <tr class="underlined-table">
+                <td>Mañana</td>
+                <td>8:00 a 12:00</td>
+              </tr>
+              <tr class="underlined-table">
+                <td>Tarde</td>
+                <td>16:00 a 20:00</td>
+              </tr>
+              <tr>
+                <td><strong>Sábados</strong></td>
+                <td></td>
+              </tr>
+              <tr class="underlined-table">
+                <td>Mañana</td>
+                <td>8:00 a 12:30</td>
+              </tr>
+            </table>
+          </div>
+          <div class="row footer-contact-info">
+            <h3 class="footer-title">Contacto</h3>
+            <p>
+              <i class="fas fa-phone"></i
+              ><span class="expand">(2284) 417 518</span><br />
+              <a href="mailto:dietetica-olavarria@hotmail.com"
+                ><i class="fas fa-envelope"></i
+                ><span class="expand">dietetica-olavarria@hotmail.com</span></a
+              ><br />
+              <a
+                href="https://www.google.com/maps/dir/Current+Location/Necochea+2875,+B7400+Olavarría,+Provincia+de+Buenos+Aires"
+                target="_blank"
+                ><i class="fas fa-map-marker-alt"></i
+                ><span class="expand">Necochea 2875, Olavaría</span></a
+              >
+            </p>
+          </div>
+          <div class="row footer-social-media">
+            <div class="col-1">
+              <i class="fab fa-facebook"></i>
+            </div>
+            <div class="col-1">
+              <a
+                href="https://www.instagram.com/dieteticaolavarria/"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+            <div class="col-1">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row footer-lower">
+      <span class="copyleft">{% now "Y" %} - Dietética Olavarría</span>
+    </div>
   </div>
 </footer>
