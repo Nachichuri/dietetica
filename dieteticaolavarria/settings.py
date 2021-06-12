@@ -142,4 +142,5 @@ AWS_S3_FILE_OVERWRITE = os.environ.get('AWS_S3_FILE_OVERWRITE')
 AWS_DEFAULT_ACL = None if os.environ.get('AWS_DEFAULT_ACL') == 'None' else os.environ.get('AWS_DEFAULT_ACL')
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+
 django_heroku.settings(locals())
