@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.deletion import SET_NULL
 
 class HomeInfo(models.Model):
     store_name = models.CharField(max_length=50)
@@ -46,8 +47,9 @@ class MainCategories(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
+    category = models.ForeignKey(MainCategories, on_delete=SET_NULL, null=True)
     image = models.ImageField(upload_to='main/images')
     description = models.TextField()
 
     def __str__(self):
-        return self.title
+        return self.name
