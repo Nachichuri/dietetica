@@ -26,11 +26,11 @@ class HomeInfo(models.Model):
 class ContactInfo(models.Model):
     store_name = models.CharField(max_length=50)
     phone = models.CharField(max_length=50)
-    mobile = models.CharField(max_length=50)
+    mobile = models.CharField(max_length=50, null=True, blank=True)
     email = models.CharField(max_length=100)
     location = models.CharField(max_length=200)
-    facebook_page = models.CharField(max_length=100)
-    instagram_page = models.CharField(max_length=100)
+    facebook_page = models.CharField(max_length=100, null=True, blank=True)
+    instagram_page = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return self.store_name
