@@ -29,11 +29,11 @@
               </tr>
               <tr class="underlined-table">
                 <td>Mañana</td>
-                <td>8:00 a 12:00</td>
+                <td>{{ info.hours_weekdays_morning }}</td>
               </tr>
               <tr class="underlined-table">
                 <td>Tarde</td>
-                <td>16:00 a 20:00</td>
+                <td>{{ info.hours_weekdays_evening }}</td>
               </tr>
               <tr>
                 <td><strong>Sábados</strong></td>
@@ -41,7 +41,7 @@
               </tr>
               <tr class="underlined-table">
                 <td>Mañana</td>
-                <td>8:00 a 12:30</td>
+                <td>{{ info.hours_weekends }}</td>
               </tr>
             </table>
           </div>
@@ -49,39 +49,41 @@
             <h3 class="footer-title">Contacto</h3>
             <p>
               <i class="fas fa-phone"></i
-              ><span class="expand">(2284) 417 518</span><br />
-              <a href="mailto:dietetica-olavarria@hotmail.com"
+              ><span class="expand">{{ contact.phone }}</span><br />
+              <a href="mailto:{{ contact.email }}" target="_blank"
                 ><i class="fas fa-envelope"></i
-                ><span class="expand">dietetica-olavarria@hotmail.com</span></a
+                ><span class="expand">{{ contact.email }}</span></a
               ><br />
               <a
                 href="https://www.google.com/maps/dir/Current+Location/Necochea+2875,+B7400+Olavarría,+Provincia+de+Buenos+Aires"
                 target="_blank"
                 ><i class="fas fa-map-marker-alt"></i
-                ><span class="expand">Necochea 2875, Olavaría</span></a
+                ><span class="expand">{{ contact.address }}</span></a
               >
             </p>
           </div>
           <div class="row footer-social-media">
             <div class="col-1">
-              <i class="fab fa-facebook"></i>
+              <a href="{{ contact.facebook_page }}" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
             </div>
             <div class="col-1">
-              <a
-                href="https://www.instagram.com/dieteticaolavarria/"
-                target="_blank"
+              <a href="{{ contact.instagram_page }}" target="_blank"
                 ><i class="fab fa-instagram"></i
               ></a>
             </div>
             <div class="col-1">
-              <i class="fab fa-whatsapp"></i>
+              <a href="{{ contact.whatsapp_link }}" target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="row footer-lower">
-      <span class="copyleft">{% now "Y" %} - Dietética Olavarría</span>
+      <span class="copyleft">{% now "Y" %} - {{ info.store_name }}</span>
     </div>
   </div>
 </footer>

@@ -7,21 +7,16 @@
         <img
           src="{{ info.image.url }}"
           class="img-fluid hero-img"
-          alt="Dietética Olavarría"
+          alt="{{ info.store_name }}"
           width="700"
           height="300"
         />
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold lh-1 mb-3 hero-title">
-          Dietética y Herboristería
+          {{ info.main_title }}
         </h1>
-        <p class="lead hero-description">
-          Somos una dietetica familiar y tradicional que se encuentra trabajando
-          hace más de 40 años. Ofrecemos productos de calidad, nacionales e
-          importados como: Cereales, Especias, Frutos secos, Harinas, Hierbas
-          naturales, Jalea Real, Legumbres, Miel, Polen.
-        </p>
+        <p class="lead hero-description">{{ info.main_description }}</p>
       </div>
     </div>
   </div>
