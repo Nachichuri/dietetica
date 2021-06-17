@@ -2,27 +2,27 @@
   <div class="container">
     <div class="row">
       <div class="top-banner-icons col-sm-4">
-        <a href="{{contact.facebook_page}}" target="_blank"
+        <a href="{{ contact.facebook_page }}" target="_blank"
           ><i class="fab fa-facebook-f"></i
         ></a>
-        <a href="{{contact.instagram_page}}" target="_blank"
+        <a href="{{ contact.instagram_page }}" target="_blank"
           ><i class="fab fa-instagram"></i
         ></a>
-        <a href="{{contact.whatsapp_link}}" target="_blank"
+        <a href="{{ contact.whatsapp_link }}" target="_blank"
           ><i class="fab fa-whatsapp"></i
         ></a>
       </div>
 
       <div class="top-banner-time col-sm-4 text-center">
-        <span>{{info.hours_oneline}}</span>
+        <span>{{ info.hours_oneline }}</span>
       </div>
 
       <div class="top-banner-contact col-sm-4 text-end">
-        <a href="{{contact.googlemaps_link}}" target="_blank">
-          <i class="fas fa-map-marker-alt"></i>{{contact.address}}
+        <a href="{{ contact.googlemaps_link }}" target="_blank">
+          <i class="fas fa-map-marker-alt"></i>{{ contact.address }}
         </a>
         <span id="separator">|</span>
-        <span><i class="fas fa-phone"></i>{{contact.phone}}</span>
+        <span><i class="fas fa-phone"></i>{{ contact.phone }}</span>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-light" id="navbar">
   <div class="container">
-    <a class="navbar-brand" href="#">{{info.store_name}}</a>
+    <a class="navbar-brand" href="#">{{ info.store_name }}</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -58,10 +58,10 @@
             >Despensa</a
           >
           <ul class="dropdown-menu" aria-labelledby="dropdown">
-            {%for category in categories%}
+            {% for category in categories %}
             <li>
-              <a class="dropdown-item" href="{{category.slug}}"
-                >{{category.name}}</a
+              <a class="dropdown-item" href="{{ category.slug }}"
+                >{{ category.name }}</a
               >
             </li>
             {% endfor %}

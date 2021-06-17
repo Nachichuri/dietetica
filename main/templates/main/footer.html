@@ -54,9 +54,7 @@
                 ><i class="fas fa-envelope"></i
                 ><span class="expand">{{ contact.email }}</span></a
               ><br />
-              <a
-                href="https://www.google.com/maps/dir/Current+Location/Necochea+2875,+B7400+Olavarría,+Provincia+de+Buenos+Aires"
-                target="_blank"
+              <a href="{{ contact.googlemaps_link }}" target="_blank"
                 ><i class="fas fa-map-marker-alt"></i
                 ><span class="expand">{{ contact.address }}</span></a
               >
