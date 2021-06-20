@@ -18,6 +18,15 @@ class CategoriesListView(ListView):
 class ProductsListView(ListView):
     model = Product
 
+def product_list(request):
+
+    context = {
+        'info': HomeInfo.objects.first(),
+        'contact': ContactInfo.objects.first(),
+        'categories': MainCategory.objects.all()
+    }
+
+    return render(request, 'main/products/categories.html', context)
+
 class ProductDetail(DetailView):
     model = Product
-    category = Product.category
