@@ -88,4 +88,80 @@
   </div>
 </footer>
 
+{% else %}
+
+<footer class="footer">
+  <div class="container footer-container"></div>
+  <div class="row container footer-cols">
+    <div class="col-lg-4 simplefooter-col">
+      <h3 class="footer-title">Horarios de atención</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><strong>Lun. a Vie.</strong></td>
+          <td></td>
+        </tr>
+        <tr class="underlined-table">
+          <td>Mañana</td>
+          <td>{{ info.hours_weekdays_morning }}</td>
+        </tr>
+        <tr class="underlined-table">
+          <td>Tarde</td>
+          <td>{{ info.hours_weekdays_evening }}</td>
+        </tr>
+        <tr>
+          <td><strong>Sábados</strong></td>
+          <td></td>
+        </tr>
+        <tr class="underlined-table">
+          <td>Mañana</td>
+          <td>{{ info.hours_weekends }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-lg-4 simplefooter-col">
+      <div class="footer-row-container">
+        <div class="row footer-contact-info">
+          <h3 class="footer-title">Contacto</h3>
+          <p>
+            <i class="fas fa-phone"></i
+            ><span class="expand">{{ contact.phone }}</span><br />
+            <a href="mailto:{{ contact.email }}" target="_blank"
+              ><i class="fas fa-envelope"></i
+              ><span class="expand">{{ contact.email }}</span></a
+            ><br />
+            <a href="{{ contact.googlemaps_link }}" target="_blank"
+              ><i class="fas fa-map-marker-alt"></i
+              ><span class="expand">{{ contact.address }}</span></a
+            >
+          </p>
+        </div>
+        <div class="row footer-social-media">
+          <div class="col-1">
+            <a href="{{ contact.facebook_page }}" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+          <div class="col-1">
+            <a href="{{ contact.instagram_page }}" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="col-1">
+            <a href="{{ contact.whatsapp_link }}" target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row simplefooter-lower">
+      <span class="copyleft">{% now "Y" %} - {{ info.store_name }}</span>
+    </div>
+  </div>
+</footer>
+
 {% endif %}

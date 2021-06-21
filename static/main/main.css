@@ -198,10 +198,10 @@ h1 {
 
 .footer {
   background-color: #d9f7e0;
-  height: 35em;
 }
 
 .footer-cols {
+  margin: auto !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,6 +298,16 @@ h1 {
   text-align: center;
   padding-top: 2rem;
   color: gray;
+  padding-bottom: 2rem;
+}
+
+/* Simple footer */
+
+.simplefooter-lower {
+  text-align: end;
+  padding-top: 3rem;
+  color: gray;
+  padding-bottom: 2rem;
 }
 
 @media only screen and (max-width: 990px) {
