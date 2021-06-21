@@ -1,5 +1,5 @@
 <br /><br /><br /><br /><br /><br /><br />
 
 {% for item in object_list %}
-<a href="#">{{item.pk}}</a><br />
+<a href="{% url 'main-product-detail' category=item.category.slug pk=item.pk %}">{{item.pk}}</a><br />
 {% endfor %}
