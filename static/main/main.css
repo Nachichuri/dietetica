@@ -38,6 +38,7 @@ h1 {
 
 .main-content {
   padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 /* Navbar */
@@ -317,13 +318,31 @@ h1 {
   .contact-column {
     border-style: none;
   }
+  .simplefooter-contact-info {
+    text-align: inherit !important;
+  }
+  .simplefooter-contact-col {
+    border-style: none !important;
+  }
+  #simplefooter-socialmedia {
+    float: left !important;
+  }
 }
 
 /* Categories and products */
 
-.productbox-container {
-  padding-top: 10em;
-  padding-bottom: 3em;
+.simplefooter-contact-info {
+  text-align: end;
+}
+
+.simplefooter-icon {
+  padding: 0 0 0 0.5em;
+}
+
+.simplefooter-contact-col {
+  border-style: solid;
+  border-width: 0 0 0 2px;
+  border-color: #d3d3d3;
 }
 
 .list-group-item.active {
