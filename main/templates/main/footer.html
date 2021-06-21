@@ -1,3 +1,5 @@
+{% if request.get_full_path == '/' %}
+
 <footer class="footer">
   <div class="container footer-container">
     <div class="row footer-cols">
@@ -85,3 +87,5 @@
     </div>
   </div>
 </footer>
+
+{% endif %}

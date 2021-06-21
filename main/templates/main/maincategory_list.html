@@ -1,6 +1,11 @@
 {% extends "main/base.html" %}
+
 {% load static %}
 
 {% block content %}
-{% include "main/products/categories.html"%}
+
+<div class="container main-content">
+    {% include "main/home/products_hero.html"%}
+</div>
+
 {% endblock content %}

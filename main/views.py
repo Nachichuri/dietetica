@@ -26,6 +26,7 @@ class CategoriesListView(ListView):
         context = super().get_context_data(**kwargs)
         context['info'] = HomeInfo.objects.first()
         context['contact'] = ContactInfo.objects.first()
+        context['categories'] = MainCategory.objects.all()
         return context
 
 class ProductsListView(ListView):
@@ -34,6 +35,7 @@ class ProductsListView(ListView):
         context = super().get_context_data(**kwargs)
         context['info'] = HomeInfo.objects.first()
         context['contact'] = ContactInfo.objects.first()
+        context['categories'] = MainCategory.objects.all()
         return context
 
     def get_queryset(self):
@@ -49,6 +51,7 @@ class ProductDetail(DetailView):
         context = super().get_context_data(**kwargs)
         context['info'] = HomeInfo.objects.first()
         context['contact'] = ContactInfo.objects.first()
+        context['categories'] = MainCategory.objects.all()
         return context
 
     def get_queryset(self):

@@ -36,6 +36,10 @@ h1 {
   color: var(--green);
 }
 
+.main-content {
+  padding-top: 5em;
+}
+
 /* Navbar */
 
 .top-banner {
@@ -115,7 +119,6 @@ h1 {
 /* Hero */
 
 .hero {
-  padding-top: 5em;
   padding-bottom: 3rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -304,4 +307,18 @@ h1 {
   .contact-column {
     border-style: none;
   }
+}
+
+/* Categories and products */
+
+.productbox-container {
+  padding-top: 10em;
+  padding-bottom: 3em;
+}
+
+.list-group-item.active {
+  background-color: transparent !important;
+  color: var(--green) !important;
+  border-color: rgba(0, 0, 0, 0.125) !important;
+  background-color: #f8f9fa !important;
 }
