@@ -1,4 +1,4 @@
-<div class="container main-content productbox-container">
+<div class="container main-content productbox-container" id="main-productinfo">
   <div class="row">
     <div class="col-3">
       <div
@@ -51,6 +51,27 @@
             <div class="row product-title"><h3>{{ object.name }}</h3></div>
             <div class="row product-description">{{ object.description }}</div>
         </div>
+    </div>
+  </div>
+</div>
+
+<div class="container main-content productbox-container" id="small-productinfo">
+  <div>
+    <hr/>
+    <h2 class="text-center">{{ object.category.name }}</h3>
+    <a class="nav-link" href="{% url 'main-products' object.category.slug %}"><strong class="mb-1"><i class="fas fa-arrow-left"></i>  Volver</strong></a>
+    <hr/>
+  </div>
+  <div class="row">
+    <div class="row product-title"><h3>{{ object.name }}</h3></div>
+    <div class="row product-description" id="small-product-description">{{ object.description }}</div>
+    <div class="row product-photo-container"><img
+      class="square product-photo"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+      alt="Generic placeholder image"
+      width="140"
+      height="140"
+    /></div>
     </div>
   </div>
 </div>

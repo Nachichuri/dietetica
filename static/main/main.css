@@ -368,6 +368,18 @@ h1 {
   background-color: #f8f9fa !important;
 }
 
+.small-list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+.small-list-group-item.active {
+  background-color: transparent !important;
+  color: var(--green) !important;
+}
+
 #category-col-title {
   font-weight: bold;
   margin: auto;
@@ -391,4 +403,28 @@ h1 {
 
 #products-back-button:hover {
   background-color: transparent !important;
+}
+
+#small-products {
+  display: none;
+}
+
+#small-productinfo {
+  display: none;
+}
+
+@media only screen and (max-width: 770px) {
+  #main-products,
+  #main-productinfo {
+    display: none !important;
+  }
+
+  #small-products,
+  #small-productinfo {
+    display: block !important;
+  }
+
+  #small-product-description {
+    padding: 3em;
+  }
 }
