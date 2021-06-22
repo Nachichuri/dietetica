@@ -43,7 +43,7 @@ class MainCategory(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True, editable=False, primary_key=True)
     image = models.ImageField(upload_to='main/images', null=True, blank=True)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -58,7 +58,8 @@ class Product(models.Model):
     slug = models.SlugField(unique=True, editable=False, primary_key=True)
     category = models.ForeignKey(MainCategory, on_delete=SET_NULL, null=True)
     image = models.ImageField(upload_to='main/images', null=True, blank=True)
-    description = models.TextField()
+    properties = models.TextField(null=True, blank=True)
+    usage = models.TextField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
