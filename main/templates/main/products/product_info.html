@@ -1,5 +1,56 @@
-<br /><br /><br /><br /><br /><br /><br />
+<div class="container main-content productbox-container">
+  <div class="row">
+    <div class="col-3">
+      <div
+        class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white"
+      >
+        <span class="fs-5 fw-semibold" id="category-col-title">{{ object.category.name }}</span>
 
-{{object.name}}<br />
-{{object.category}}<br />
-{{object.pk}}<br />
+        <div class="list-group list-group-flush border-bottom scrollarea">
+            <a
+                href="{% url 'main-products' object.category.slug %}"
+                id="products-back-button"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+                aria-current="true"
+            >
+                <div
+                class="d-flex w-100 align-items-center justify-content-between"
+                >
+                <strong class="mb-1"><i class="fas fa-arrow-left"></i>  Despensa</strong>
+                </div>
+            </a>
+          {% for item in samecategory|dictsort:"name" %}
+          <a
+            href="{% url 'main-product-detail' category=item.category.slug pk=item.pk %}"
+            {% if item.pk == object.pk %}
+            class="list-group-item list-group-item-action py-3 lh-tight active"
+            {% else %}
+            class="list-group-item list-group-item-action py-3 lh-tight"
+            {% endif %}
+            aria-current="true"
+          >
+            <div
+              class="d-flex w-100 align-items-center justify-content-between"
+            >
+              <strong class="mb-1">{{ item.name }}</strong>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col-9 row">
+        <div class="col-3 product-photo-container"><img
+                    class="rounded-circle product-photo"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    alt="Generic placeholder image"
+                    width="140"
+                    height="140"
+                    /></div>
+        <div class="col-9">
+            <div class="row product-title"><h3>{{ object.name }}</h3></div>
+            <div class="row product-description">{{ object.description }}</div>
+        </div>
+    </div>
+  </div>
+</div>

@@ -52,6 +52,7 @@ class ProductDetail(DetailView):
         context['info'] = HomeInfo.objects.first()
         context['contact'] = ContactInfo.objects.first()
         context['categories'] = MainCategory.objects.all()
+        context['samecategory'] = Product.objects.filter(category=self.kwargs['category'])
         return context
 
     def get_queryset(self):

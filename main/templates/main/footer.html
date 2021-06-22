@@ -127,15 +127,18 @@
         <div class="row footer-contact-info simplefooter-contact-info">
           <h3 class="footer-title">Contacto</h3>
           <p>
-            <span class="expand">{{ contact.phone }}</span
-            ><i class="fas fa-phone simplefooter-icon"></i><br />
+            <i class="fas fa-phone simplefooter-icon-left"></i
+            ><span class="expand">{{ contact.phone }}</span
+            ><i class="fas fa-phone simplefooter-icon-right"></i><br />
             <a href="mailto:{{ contact.email }}" target="_blank"
+              ><i class="fas fa-envelope simplefooter-icon-left"></i
               ><span class="expand">{{ contact.email }}</span
-              ><i class="fas fa-envelope simplefooter-icon"></i></a
+              ><i class="fas fa-envelope simplefooter-icon-right"></i></a
             ><br />
             <a href="{{ contact.googlemaps_link }}" target="_blank"
+              ><i class="fas fa-map-marker-alt simplefooter-icon-left"></i
               ><span class="expand">{{ contact.address }}</span
-              ><i class="fas fa-map-marker-alt simplefooter-icon"></i
+              ><i class="fas fa-map-marker-alt simplefooter-icon-right"></i
             ></a>
           </p>
         </div>
