@@ -57,7 +57,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True, editable=False, primary_key=True)
     category = models.ForeignKey(MainCategory, on_delete=SET_NULL, null=True)
-    image = models.ImageField(upload_to='main/images', null=True, blank=True)
+    image = models.ImageField(upload_to='main/images')
     properties = models.TextField(null=True, blank=True)
     usage = models.TextField(null=True, blank=True)
 
