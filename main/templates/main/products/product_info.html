@@ -42,8 +42,8 @@
     <div class="col-9 row">
         <div class="col-3 product-photo-container"><img
                     class="rounded-circle product-photo"
-                    src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                    alt="Generic placeholder image"
+                    src="{{ object.image.url }}"
+                    alt=""
                     width="140"
                     height="140"
                     /></div>
@@ -69,8 +69,8 @@
     <div class="row product-description" id="small-product-description">{{ object.usage }}</div>
     <div class="row product-photo-container"><img
       class="square product-photo"
-      src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-      alt="Generic placeholder image"
+      src="{{ object.image.url }}"
+      alt=""
       width="140"
       height="140"
     /></div>
