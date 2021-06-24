@@ -1,2 +1,2 @@
-release: python manage.py migrate --no-input
+release: python manage.py migrate main --no-input
 web: gunicorn dieteticaolavarria.wsgi --log-file -
