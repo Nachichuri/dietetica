@@ -1,16 +1,22 @@
+{% load static %}
+
 <div class="types container">
   <div class="row d-flex justify-content-center product-type-container">
     <div class="col-lg-3 text-center product-type">
-      <div class="product-type-info">{{ info.gluten_free_logo }}</div>
+      <img class="product-type-svg" src={% static 'main/logos/gluten.svg'%} />
+      <span class="product-type-message">{{info.gluten_free_message}}</span>
     </div>
     <div class="col-lg-3 text-center product-type">
-      <div class="product-type-info">{{ info.vegan_logo }}</div>
+      <img class="product-type-svg" src={% static 'main/logos/plant-based.svg'%} />
+      <span class="product-type-message">{{info.vegan_message}}</span>
     </div>
     <div class="col-lg-3 text-center product-type">
-      <div class="product-type-info">{{ info.natural_logo }}</div>
+      <img class="product-type-svg" src={% static 'main/logos/growth.svg'%} />
+      <span class="product-type-message">{{info.natural_message}}</span>
     </div>
     <div class="col-lg-3 text-center product-type">
-      <div class="product-type-info">{{ info.organic_logo }}</div>
+      <img class="product-type-svg" src={% static 'main/logos/eco-friendly.svg'%} />
+      <span class="product-type-message">{{info.organic_message}}</span>
     </div>
   </div>
 </div>

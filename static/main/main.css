@@ -173,6 +173,33 @@ h1 {
   transition: all 0.2s ease-in-out;
 }
 
+.product-type:hover .product-type-svg {
+  display: none;
+}
+
+.product-type:hover .product-type-message {
+  display: flex;
+  text-align: center;
+}
+
+.product-type-message {
+  display: none;
+}
+
+.product-type-message:hover {
+  cursor: default;
+}
+
+.product-type-svg {
+  height: 80%;
+  filter: invert(28%) sepia(56%) saturate(3636%) hue-rotate(113deg)
+    brightness(100%) contrast(108%);
+}
+
+.product-type:hover .product-type-svg {
+  display: none;
+}
+
 @media only screen and (max-width: 991px) {
   .product-type {
     border-width: 1px 2px 1px 2px;
