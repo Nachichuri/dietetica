@@ -413,6 +413,12 @@ h1 {
   padding-bottom: 1em;
 }
 
+.products-column {
+  height: 30em;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .product-photo-container {
   display: flex;
   align-items: center;
