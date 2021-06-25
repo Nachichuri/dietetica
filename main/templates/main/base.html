@@ -30,8 +30,14 @@
   </head>
 
   <body>
-    <header>{% include "main/navbar.html" %}</header>
-    <main>{% block content %} {% endblock %}</main>
+    <header>
+      {% include "main/navbar.html" %}
+    </header>
+    
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
 
     {% include "main/footer.html" %}
 

@@ -1,0 +1,79 @@
+<div class="container main-content productbox-container" id="main-productinfo">
+  <div class="row">
+    <div class="col-3">
+      <div
+        class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white"
+      >
+        <span class="fs-5 fw-semibold" id="category-col-title">{{ object.category.name }}</span>
+
+        <div class="list-group list-group-flush border-bottom scrollarea">
+            <a
+                href="{% url 'main-products' object.category.slug %}"
+                id="products-back-button"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+                aria-current="true"
+            >
+                <div
+                class="d-flex w-100 align-items-center justify-content-between"
+                >
+                <strong class="mb-1"><i class="fas fa-arrow-left"></i>  Despensa</strong>
+                </div>
+            </a>
+          {% for item in samecategory|dictsort:"name" %}
+          <a
+            href="{% url 'main-product-detail' category=item.category.slug pk=item.pk %}"
+            {% if item.pk == object.pk %}
+            class="list-group-item list-group-item-action py-3 lh-tight active"
+            {% else %}
+            class="list-group-item list-group-item-action py-3 lh-tight"
+            {% endif %}
+            aria-current="true"
+          >
+            <div
+              class="d-flex w-100 align-items-center justify-content-between"
+            >
+              <strong class="mb-1">{{ item.name }}</strong>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col-9 row">
+        <div class="col-3 product-photo-container"><img
+                    class="rounded-circle product-photo"
+                    src="{{ object.image.url }}"
+                    alt=""
+                    width="140"
+                    height="140"
+                    /></div>
+        <div class="col-9">
+            <div class="row product-title"><h3>{{ object.name }}</h3></div>
+            <div class="row product-description">{{ object.properties }}</div>
+            <div class="row product-description">{{ object.usage }}</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container main-content productbox-container" id="small-productinfo">
+  <div>
+    <hr/>
+    <h2 class="text-center">{{ object.category.name }}</h3>
+    <a class="nav-link" href="{% url 'main-products' object.category.slug %}"><strong class="mb-1"><i class="fas fa-arrow-left"></i>  Volver</strong></a>
+    <hr/>
+  </div>
+  <div class="row">
+    <div class="row product-title"><h3>{{ object.name }}</h3></div>
+    <div class="row product-description" id="small-product-description">{{ object.properties }}</div>
+    <div class="row product-description" id="small-product-description">{{ object.usage }}</div>
+    <div class="row product-photo-container"><img
+      class="square product-photo"
+      src="{{ object.image.url }}"
+      alt=""
+      width="140"
+      height="140"
+    /></div>
+    </div>
+  </div>
+</div>

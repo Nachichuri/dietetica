@@ -1,3 +1,5 @@
+{% if request.get_full_path == '/' %}
+
 <footer class="footer">
   <div class="container footer-container">
     <div class="row footer-cols">
@@ -85,3 +87,87 @@
     </div>
   </div>
 </footer>
+
+{% else %}
+
+<footer class="footer">
+  <div class="container footer-container"></div>
+  <div class="row container footer-cols">
+    <div class="col-lg-4 simplefooter-col">
+      <h3 class="footer-title">Horarios de atención</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><strong>Lun. a Vie.</strong></td>
+          <td></td>
+        </tr>
+        <tr class="underlined-table">
+          <td>Mañana</td>
+          <td>{{ info.hours_weekdays_morning }}</td>
+        </tr>
+        <tr class="underlined-table">
+          <td>Tarde</td>
+          <td>{{ info.hours_weekdays_evening }}</td>
+        </tr>
+        <tr>
+          <td><strong>Sábados</strong></td>
+          <td></td>
+        </tr>
+        <tr class="underlined-table">
+          <td>Mañana</td>
+          <td>{{ info.hours_weekends }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-lg-4 simplefooter-col simplefooter-contact-col">
+      <div class="footer-row-container">
+        <div class="row footer-contact-info simplefooter-contact-info">
+          <h3 class="footer-title">Contacto</h3>
+          <p>
+            <i class="fas fa-phone simplefooter-icon-left"></i
+            ><span class="expand">{{ contact.phone }}</span
+            ><i class="fas fa-phone simplefooter-icon-right"></i><br />
+            <a href="mailto:{{ contact.email }}" target="_blank"
+              ><i class="fas fa-envelope simplefooter-icon-left"></i
+              ><span class="expand">{{ contact.email }}</span
+              ><i class="fas fa-envelope simplefooter-icon-right"></i></a
+            ><br />
+            <a href="{{ contact.googlemaps_link }}" target="_blank"
+              ><i class="fas fa-map-marker-alt simplefooter-icon-left"></i
+              ><span class="expand">{{ contact.address }}</span
+              ><i class="fas fa-map-marker-alt simplefooter-icon-right"></i
+            ></a>
+          </p>
+        </div>
+        <div
+          class="row footer-social-media float-end"
+          id="simplefooter-socialmedia"
+        >
+          <div class="col-3">
+            <a href="{{ contact.facebook_page }}" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+          <div class="col-3">
+            <a href="{{ contact.instagram_page }}" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="col-3">
+            <a href="{{ contact.whatsapp_link }}" target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row footer-lower">
+      <span class="copyleft">{% now "Y" %} - {{ info.store_name }}</span>
+    </div>
+  </div>
+</footer>
+
+{% endif %}
