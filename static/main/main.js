@@ -3,7 +3,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("top-banner").style.display = "none";
     document.getElementById("navbar").style.marginTop = "0";
   } else {
