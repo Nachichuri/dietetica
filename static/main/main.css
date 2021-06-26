@@ -220,6 +220,10 @@ h1 {
 
 /* Recipes */
 
+.recipe-image-container {
+  height: 30em;
+}
+
 /* Contact */
 
 /* Footer */
