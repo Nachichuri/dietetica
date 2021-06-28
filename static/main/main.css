@@ -200,6 +200,11 @@ h1 {
   display: none;
 }
 
+#small-product-image {
+  object-fit: cover;
+  width: 50%;
+}
+
 @media only screen and (max-width: 991px) {
   .product-type {
     border-width: 1px 2px 1px 2px;
