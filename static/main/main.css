@@ -221,6 +221,13 @@ h1 {
   }
 }
 
+@media only screen and (max-width: 575px) {
+  .product-type-container {
+    margin-left: 2em !important;
+    margin-right: 2em !important;
+  }
+}
+
 /* Products */
 
 /* Recipes */
@@ -466,7 +473,12 @@ h1 {
     display: block !important;
   }
 
+  #small-productinfo {
+    padding-top: 7em !important;
+  }
+
   #small-product-description {
-    padding: 3em;
+    padding: 1em 2em 1em 2em;
+    text-align: justify;
   }
 }
