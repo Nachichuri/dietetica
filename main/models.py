@@ -18,6 +18,7 @@ class HomeInfo(models.Model):
     products_title = models.CharField(max_length=100)
     products_description = models.TextField()
     recipe_title = models.CharField(max_length=50)
+    recipe_image = models.ImageField(upload_to='main/images', null=True, blank=True)
     recipe_description = models.TextField()
     hours_oneline = models.CharField(max_length=100)
     hours_weekdays_morning = models.CharField(max_length=50, null=True, blank=True)
