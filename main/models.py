@@ -72,3 +72,17 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+class Recipe(models.Model):
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True, editable=False, primary_key=True)
+    image = models.ImageField(upload_to='main/images', null=True, blank=True)
+    ingredients = models.TextField(null=True, blank=True)
+    steps = models.TextField(null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Product, self).save(*args, **kwargs)  
+
+    def __str__(self):
+        return self.name
